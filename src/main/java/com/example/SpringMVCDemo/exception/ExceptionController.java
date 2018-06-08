@@ -14,8 +14,7 @@ public class ExceptionController {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(RuntimeException.class)
-    public @ResponseBody
-    Map<String, String> handleValidationException(RuntimeException e) {
+    public @ResponseBody Map<String, String> handleValidationException(RuntimeException e) {
         Map<String, String> map = new HashMap<>(1);
         map.put("message", e.getLocalizedMessage());
         return map;

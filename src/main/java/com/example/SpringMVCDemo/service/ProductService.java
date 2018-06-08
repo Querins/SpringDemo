@@ -6,10 +6,7 @@ import com.example.SpringMVCDemo.domain.Product;
 import com.example.SpringMVCDemo.dto.ProductDTO;
 import com.example.SpringMVCDemo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
 
 @Service
 public class ProductService {
