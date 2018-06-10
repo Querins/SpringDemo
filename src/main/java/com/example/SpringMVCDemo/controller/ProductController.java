@@ -29,8 +29,8 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void postProduct(@RequestBody ProductDTO product) {
-        service.postProduct(product);
+    public Product postProduct(@RequestBody ProductDTO product) {
+        return service.postProduct(product);
     }
 
     @PutMapping(path = "/{id}")

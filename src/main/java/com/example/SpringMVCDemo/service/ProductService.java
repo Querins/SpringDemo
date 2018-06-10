@@ -34,9 +34,10 @@ public class ProductService {
         return repository.findAll();
     }
 
-    public void postProduct(ProductDTO productDTO) {
+    public Product postProduct(ProductDTO productDTO) {
         Product createdProduct = createProductCreateConverter.convert(productDTO);
         repository.save(createdProduct);
+        return createdProduct;
     }
 
     public void updateProduct(Long id, ProductDTO newProduct) {
